@@ -19,24 +19,29 @@ function findz()
 	str = "x:" + xmin + "~" + xmax + "の検索結果<br><br>";
 	for(var x=xmin;x<=xmax;x=nextFloat(x)){
 		za = Math.fround((x+6000)/(6200+6000)*(32700+33900)-33900);
-		cflg = 1;
+		cflg = 3;
 		z = za;
-		while(cflg===1){
+		while(cflg>0){
 			z = prevFloat(z);
 			console.log(checkFloor(x,z));
 			if(!checkFloor(x,z)){
-				cflg = 0;
-				str = str + "x=" + x + "<br> z=" + z + " NG<br>";
+				cflg -= 1;
+				if(cflg===0){
+					str = str + "x=" + x +"<br> z=" + z + " NG<br>";
+				}
 			}
 		}
-		cflg = 1;
-		while(cflg===1){
+		cflg = 6;
+		while(cflg>0){
 			z = nextFloat(z);
 			if(checkFloor(x,z)){
 				str = str + " z=" + z + " OK<br>";
 			}else{
-				cflg = 0;
-				str = str + " z=" + z + " NG<br><br>";
+				cflg -= 1;
+				str = str + " z=" + z + " NG<br>";
+				if(cflg===0){
+					str = str + "<br>";
+				}
 			}
 		}
 		document.getElementById('resultlist').innerHTML = str;
