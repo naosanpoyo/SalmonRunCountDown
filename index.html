@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+	  <title>コロナマウンテン溶岩テスト</title>
+  </head>
+  <body>
+     <p>
+		  x座標の範囲を指定して検索<br>
+		  <input type="number" id="xmin" value=1>から<input type="number" id="xmax" value=1.000001><br>
+		  <input type="button" value="検索" onclick="findz();"/>
+	  </p>
+	  <p>
+		  z座標の範囲を指定して検索<br>
+		  <input type="number" id="zmin">から<input type="number" id="zmax"><br>
+		  <input type="button" value="検索" onclick="findx();"/>
+	  </p>
+	  <div id="resultlist"></div>
+	  <script type="text/javascript" src="cmlava.js"></script>
+  </body>
+</html>
