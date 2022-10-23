@@ -101,6 +101,21 @@ function notifySpawn() {
 	spawnNum++;
 }
 
+function onStart10Sec() {
+	if (!isMoving) {
+		if ($("#start10Sec").prop("checked")) {
+			count = 110;
+			prevCount = 110;
+			spawnNum = 0;
+		} else {
+			count = 100;
+			prevCount = 100;
+			spawnNum = 1;
+		}
+		$("#timer").html(`${Math.floor(count)}`);
+	}
+}
+
 function onHazardLevel() {
 	value = $("#hazardLevel").val();
 	console.log(`hazardLevel: ${value}`);

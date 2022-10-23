@@ -60,7 +60,7 @@
 		</div>
 		<div id="bottomContainer">
 			<div id="notificationSettings">
-			<label><input type="checkbox" id="start10Sec">10秒前からスタート</label><br>
+			<label><input type="checkbox" id="start10Sec" onchange="onStart10Sec()">10秒前からスタート</label><br>
 			<label><input type="checkbox" id="notify50Sec" checked>残り50秒をお知らせ</label><br>
 			<label><input type="checkbox" id="notify30Sec" checked>残り30秒をお知らせ</label><br>
 			<label><input type="checkbox" id="notify10Sec" checked>残り10秒をお知らせ</label><br>
@@ -78,7 +78,10 @@
 				<input type="button" class="button" value="ストップ" onclick="onStop()"/>
 			</div>
 		</div>
-		<div id="footer">音声素材提供：あみたろの声素材工房 <a href="https://amitaro.net">https://amitaro.net</a></div>
+		<div id="footer">
+			Safariでは音声の自動再生が制限されているため動作しません。<br>
+			音声素材提供：あみたろの声素材工房 <a href="https://amitaro.net">https://amitaro.net</a>
+		</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="countdown.js"></script>
 	</body>
