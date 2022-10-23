@@ -1,0 +1,72 @@
+#topContainer{
+	display: flex;
+}
+
+#clockContainer{
+	border: solid;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 4px;
+	text-align: center;
+	line-height: 60%;
+}
+
+.clock-time{
+	font-size: 28px;
+}
+
+#timerContainer{
+	border: solid;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 4px;
+	text-align: center;
+	line-height: 60%;
+}
+
+#spawnContainer{
+	border: solid;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 4px;
+	text-align: center;
+	line-height: 140%;
+}
+
+#timer{
+	font-size: 28px;
+}
+
+#bottomContainer{
+	display: flex;
+}
+
+#notificationSettings{
+	border: solid;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 4px;
+	line-height: 80%;
+}
+
+#hazardLevelSettings{
+	border: solid;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 4px;
+	text-align: center;
+	line-height: 200%;
+}
+
+.button{
+	font-size: 32px;
+	border-radius: 12px;
+	background-color: #ff8844;
+	color: aliceblue;
+}
+
+#footer{
+	margin-top: 100px;
+	font-size: 12px;
+}
+
