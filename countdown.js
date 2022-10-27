@@ -29,7 +29,7 @@ function onStart() {
 }
 
 function onStop() {
-	console.log('start');
+	console.log('stop');
 	isMoving = false;
 	if ($("#start10Sec").prop("checked")) {
 		count = 110;
@@ -160,3 +160,22 @@ function onHazardLevel() {
 	}
 	$("#spawn").html(`<p>${spawnStr}</p>`);
 }
+
+$(function () {
+	$('#startButton').click(function () {
+		onStart();
+		return false;
+	});
+
+	$('#stopButton').click(function () {
+		onStop();
+		return false;
+	});
+
+	$('body').keydown(function (ev) {
+		if (ev.key === ' ') {
+			isMoving ? onStop() : onStart();
+			return false;
+		}
+	});
+});
